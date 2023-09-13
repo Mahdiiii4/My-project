@@ -20,22 +20,14 @@ public class MovementCube : MonoBehaviour
         {
             transform.position += new Vector3(0,0,speed * Time.deltaTime);
         }
-        else if(transform.position.x >=-7)
+        else if(transform.position.z >=-7)
         {
-            moveUpZ= true;
-            transform.position += new Vector3(-speed * Time.deltaTime,0,0);
-        }
-
-        moveUpZ= false;
-
-        else if(transform.position.z >=-7 && !moveUpZ)
-        {
+            moveUpZ = true;
             transform.position += new Vector3(0,0,-speed * Time.deltaTime);
         }
-        else if(transform.position.x <=-7 )
+        else
         {
-            moveUpZ= true;
-            transform.position += new Vector3(speed * Time.deltaTime,0,0);
+            moveUpZ = false;
         }
     }
 }
