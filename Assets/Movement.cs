@@ -26,5 +26,6 @@ public class Movement : MonoBehaviour
         {
             transform.position += new UnityEngine.Vector3(Time.deltaTime * speed,0,0);
         }
+        
     }
 }
